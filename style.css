@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'MyCustomFont';       
+  src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype-variations'), /* Modern variable standard */
+       url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');            /* Fallback for older browsers */
+  
+  /* Open up the full range of weights available in Hanken Grotesk */
+  font-weight: 100 900;               
+  font-style: normal;                
+  font-display: swap;                
+}
+
+
+*{box-sizing: border-box; font-family: 'MyCustomFont', sans-serif;}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-card{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    height: 45vh;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-bottom: 15%;
+
+}
+
+.top-circle{
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    height: 45%;
+    margin: 0 32%;
+    border-radius: 9999px;
+    text-align: inherit;
+    transform: translateY(-17.5%);
+    
+}
+
+
+
+.bottom-card{
+   
+    height: 60vh;
+}
+
+/*starting with generic background color but will eventually be moved to specific
+in individual sub-classes*/
+
+.bottom-trait{
+    height: 11.25%;
+    margin: 5%;
+    padding: 2.5% 5%;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.attribute{transform: translate(4.5vw, -4vh);}
+.bottom-image{transform: translate(-20%, 25%)}
+
+.reaction-score{
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.075);
+}
+
+.memory-score{
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.125);
+
+}
+
+.verbal-score{
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.visual-score{
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.next{
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(221, 100%, 96%);
+    background-color: hsl(224, 30%, 27%);
+    width: 90%;
+    height: 12.5%;
+    margin: 3% 5% 5%;
+    border-radius: 9999px;
+}
+
+.next:hover{
+    background-color: hsl(241, 81%, 54%);
+}
+
+.txt-header{font-size: 20px; font-weight: 700; color: hsl(241, 100%, 89%);}
+.txt-score{font-size: 64px; font-weight: 800; color: white; margin: 30% 0 0px 0; line-height: 0.8;
+            transform: translateY(4.5vh);}
+.txt-percent{font-size: 16px; font-weight: 500; color: hsl(241, 100%, 89%); margin-bottom: 0;
+            transform: translateY(4.25vh)}
+.txt-rating{font-size: 28px; font-weight: 500; color: white; margin-bottom: 2.5%;}
+.txt-brag{font-size: 16px; font-weight: 500; color: hsl(241, 100%, 89%);margin-top: 0; padding-inline: 15%;}
+
+.txt-summary{font-weight: 700; color: hsl(224, 30%, 27%); font-size: 20px; margin: 7.5% 5%;}
+.txt-trait-score{text-align: right;  padding-right: 17.5%; transform: translateY(-8vh); 
+                color: hsl(224, 30%, 27%); font-size: 20px; font-weight: 800;}
+.extend-tts{text-align: right; transform: translateY(-13.5vh);
+             color:hsla(224, 30%, 27%, 0.5); font-size: 20px; font-weight: 800;}
+
+@media (min-width: 768px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(221, 100%, 96%);
+        }
+  .card {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 512.5px;
+    height: 47.5vh;
+    margin-block: 25vh;
+    background-color: white;
+    border-radius: 20px;
+    
+    
+    box-shadow:0.75vw 3vh 40px hsla(224, 30%, 27%, 0.1);
+  }
+
+  .top-card{
+    height: 100%;
+    width: 50%;
+    border-radius: 20px;
+    
+    }
+
+    .txt-header{font-size: 17px; margin-top: 10%;}
+    .top-circle{
+        margin-inline: 23%;
+        min-height: 19vh;
+        margin-top: -10%;
+    }
+
+        .txt-score{font-size: 48px; margin-top: 55%;}
+        .txt-percent{font-size: 12px;}
+    .txt-rating{font-size: 22px; margin-top: -3%;}
+    .txt-brag{font-size: 12px; padding-inline: 16%;}
+
+
+  .bottom-card{
+    height: 100%;
+    min-width: 50%;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    }
+        .txt-summary{font-size: 17px; font-weight: 800; margin-top: 12.5%;}
+        .bottom-trait{height: 10.5%; font-size: 12px;}
+            
+            .txt-trait-score{font-size: 12px;}
+                .extend-tts{font-size: 12px; transform: translateY(-11.75vh);}
+        .next{font-size: 12px;}
+
+}
